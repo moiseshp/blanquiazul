@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/theskin/static/css/main.97906b4a.chunk.css",
-    "main.js": "/theskin/static/js/main.587f964e.chunk.js",
-    "main.js.map": "/theskin/static/js/main.587f964e.chunk.js.map",
-    "runtime-main.js": "/theskin/static/js/runtime-main.093c6003.js",
-    "runtime-main.js.map": "/theskin/static/js/runtime-main.093c6003.js.map",
-    "static/js/2.9eab2b69.chunk.js": "/theskin/static/js/2.9eab2b69.chunk.js",
-    "static/js/2.9eab2b69.chunk.js.map": "/theskin/static/js/2.9eab2b69.chunk.js.map",
-    "static/js/3.1ad698b0.chunk.js": "/theskin/static/js/3.1ad698b0.chunk.js",
-    "static/js/3.1ad698b0.chunk.js.map": "/theskin/static/js/3.1ad698b0.chunk.js.map",
+    "main.css": "/theskin/static/css/main.9f9c6b6b.chunk.css",
+    "main.js": "/theskin/static/js/main.a7f51d3e.chunk.js",
+    "main.js.map": "/theskin/static/js/main.a7f51d3e.chunk.js.map",
+    "runtime-main.js": "/theskin/static/js/runtime-main.96e3b8cd.js",
+    "runtime-main.js.map": "/theskin/static/js/runtime-main.96e3b8cd.js.map",
+    "static/js/2.30f2d8e4.chunk.js": "/theskin/static/js/2.30f2d8e4.chunk.js",
+    "static/js/2.30f2d8e4.chunk.js.map": "/theskin/static/js/2.30f2d8e4.chunk.js.map",
+    "static/js/3.62addd16.chunk.js": "/theskin/static/js/3.62addd16.chunk.js",
+    "static/js/3.62addd16.chunk.js.map": "/theskin/static/js/3.62addd16.chunk.js.map",
     "index.html": "/theskin/index.html",
-    "static/css/main.97906b4a.chunk.css.map": "/theskin/static/css/main.97906b4a.chunk.css.map",
-    "static/js/2.9eab2b69.chunk.js.LICENSE.txt": "/theskin/static/js/2.9eab2b69.chunk.js.LICENSE.txt",
+    "static/css/main.9f9c6b6b.chunk.css.map": "/theskin/static/css/main.9f9c6b6b.chunk.css.map",
+    "static/js/2.30f2d8e4.chunk.js.LICENSE.txt": "/theskin/static/js/2.30f2d8e4.chunk.js.LICENSE.txt",
     "static/media/TShirt-sponsors-1159x1500.f5f43290.png": "/theskin/static/media/TShirt-sponsors-1159x1500.f5f43290.png",
     "static/media/tshirt-number-font.css": "/theskin/static/media/croatia-2020.a42864aa.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.093c6003.js",
-    "static/js/2.9eab2b69.chunk.js",
-    "static/css/main.97906b4a.chunk.css",
-    "static/js/main.587f964e.chunk.js"
+    "static/js/runtime-main.96e3b8cd.js",
+    "static/js/2.30f2d8e4.chunk.js",
+    "static/css/main.9f9c6b6b.chunk.css",
+    "static/js/main.a7f51d3e.chunk.js"
   ]
 }
