@@ -32,15 +32,15 @@ const Number = () => {
           <Grid
             key={number.toString()}
             style={{ display: getDisplay(number) }}
-            sm={3}
-            item 
+            xs={3}
+            item
           >
-            <NumberItem 
+            {<NumberItem 
               onClick={() => handleNumber(number)}
               variant={getVariant(number)}
               color={getColor(number)}
               item={number}
-            />
+            />}
           </Grid>
         ))}
       </Grid>
