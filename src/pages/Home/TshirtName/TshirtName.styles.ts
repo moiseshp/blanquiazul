@@ -8,19 +8,19 @@ export const useStyles = makeStyles((muitheme: Theme) =>
       position: 'absolute',
       left: '50%',
       color: muitheme.palette.secondary.main,
-      fontFamily: 'Squada One',
-      textShadow: '2px 2px 2px #FFF',
+      fontFamily: 'NikeCroatia2020',
+      textShadow: '1px 1px 2px #FFF',
       transform: 'translate(-50%, -50%)',
-      letterSpacing: -1,
+      letterSpacing: 1,
       top: 103,
       fontSize: 37,
       [muitheme.breakpoints.up('md')]: {
         top: 120,
         fontSize: 42,  
       },
-      [muitheme.breakpoints.up('xl')]: {
+      [muitheme.breakpoints.up('lg')]: {
         top: 160,
-        fontSize: 55,  
+        fontSize: 60,  
       }
     }
   })

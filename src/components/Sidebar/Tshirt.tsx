@@ -3,7 +3,11 @@ import { useRecoilState } from 'recoil'
 import { tshirtsState } from 'store/tshirts/atoms'
 import { skinTshirtState } from 'store/skin/atoms'
 import { skinSponsorState } from 'store/skin/atoms'
-import CheckOutlinedIcon from '@material-ui/icons/CheckOutlined'
+import {
+  CheckOutlined as CheckOutlinedIcon,
+  RadioButtonUnchecked as RadioButtonUncheckedIcon 
+} from '@material-ui/icons'
+
 import { ITshirt } from 'store/types/tshirt'
 
 // TODO: https://material-ui.com/es/styles/basics/
@@ -11,7 +15,6 @@ const Tshirt = () => {
   const [tshirts] = useRecoilState(tshirtsState)
   const [tshirt] = useRecoilState(skinTshirtState)
   const [sponsor, setSponsor] = useRecoilState(skinSponsorState)
-  const getVariant = (id: string | undefined) => tshirt?.id === id ? 'contained' : 'outlined' 
   const getColor = (id: string | undefined) => tshirt?.id === id ? 'primary' : 'inherit' 
   const getStyles = (tshirt: ITshirt) => ({
     backgroundColor: tshirt.color,
@@ -35,10 +38,10 @@ const Tshirt = () => {
       </Box>
       <Grid container spacing={1}>
         {tshirts.map((item: ITshirt) => 
-          <Grid key={item.id} item sm={6}>
+          <Grid key={item.id} item xs={6}>
             <Button
               fullWidth
-              variant={getVariant(item.id)}
+              variant="contained"
               style={getStyles(item)}
               disableElevation
               size="large"
@@ -48,7 +51,7 @@ const Tshirt = () => {
               {tshirt?.id === item.id ? (
                 <CheckOutlinedIcon />
               ) : (
-                <strong>{item.name}</strong>
+                <RadioButtonUncheckedIcon />
               )}
             </Button>
           </Grid>

@@ -1,18 +1,33 @@
-import { AppBar, Box, Toolbar } from '@material-ui/core'
+import { AppBar, Button, Toolbar } from '@material-ui/core'
+import { ArrowDownward as ArrowDownwardIcon } from '@material-ui/icons'
 import { useRecoilState } from 'recoil'
-import { sidebarIsActiveState, sidebarWidthState } from 'store/sidebar/atoms'
+import { skinThemeState } from 'store/skin/atoms'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { useTheme } from '@material-ui/core/styles'
 import { useStyles } from './Footer.styles'
 
 const Footer = () => {
-  const [sidebarIsActive] = useRecoilState(sidebarIsActiveState)
-  const [sidebarWith] = useRecoilState(sidebarWidthState)
-  const classes = useStyles(({ sidebarIsActive, sidebarWith }))
-  const date = new Date()
+  const [theme] = useRecoilState(skinThemeState)
+  const muiTheme = useTheme()
+  const matches = useMediaQuery(muiTheme.breakpoints.down('xs'))
+  const classes = useStyles({ theme })
   return (
-    <AppBar className={classes.root} color="transparent" elevation={0}>
-      <Toolbar>
-        <Box flexGrow={1} />
-        Navigation
+    <AppBar
+      className={classes.root}
+      position="fixed"
+      color="transparent"
+      elevation={0}
+    >
+      <Toolbar className={classes.toolbar}>
+        <Button
+          className={classes.button}
+          variant="outlined"
+          color="default"
+          startIcon={<ArrowDownwardIcon />}
+          fullWidth={matches}
+        >
+          Descargar
+        </Button>
       </Toolbar>
     </AppBar>
   )

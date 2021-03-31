@@ -3,18 +3,15 @@ import Header from 'components/Header'
 import Footer from 'components/Footer'
 import { useStyles } from './Home.styles'
 import { useRecoilState } from 'recoil'
-import { skinThemeState } from 'store/skin/atoms'
-import { ITheme } from 'store/types/theme'
+import { skinThemeState, skinScreenState } from 'store/skin/atoms'
 import tshirtImage from 'images/TShirt-sponsors-1159x1500.png'
 import TshirtName from './TshirtName'
 import TshirtNumber from './TshirtNumber'
-interface IProps {
-  theme: ITheme
-}
+
 const Home = () => {
   const [theme] = useRecoilState(skinThemeState)
-  const classes = useStyles({ theme } as IProps)
-
+  const [screen] = useRecoilState(skinScreenState)
+  const classes = useStyles({ theme, screen })
   return (
     <div className={classes.root}>
       <Header />
@@ -29,7 +26,6 @@ const Home = () => {
             </header>
             <TshirtName />
             <TshirtNumber />
-            <footer className={classes.footer}>@moiseshp</footer>
           </fieldset>
         </article>
       </main>

@@ -1,4 +1,4 @@
-import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, IconButton, Link, Toolbar, Typography } from '@material-ui/core'
 import {  TuneOutlined as TuneOutlinedIcon } from '@material-ui/icons'
 import { useRecoilState } from 'recoil'
 import { sidebarIsActiveState, sidebarWidthState } from 'store/sidebar/atoms'
@@ -8,10 +8,10 @@ const Navbar = () => {
   const [sidebarIsActive, setSidebarIsActive] = useRecoilState(sidebarIsActiveState)
   const [sidebarWith] = useRecoilState(sidebarWidthState)
   const classes = useStyles(({ sidebarIsActive, sidebarWith }))
-  const date = new Date()
   const handleSidebar = (event: React.MouseEvent<HTMLElement>) => {
     setSidebarIsActive(!sidebarIsActive)
   }
+  const twitterLink = process.env.REACT_APP_TWITTER
   return (
     <AppBar
       position="fixed"
@@ -20,6 +20,15 @@ const Navbar = () => {
       color="transparent"
     >
       <Toolbar>
+        <Typography variant="body2">
+          <Link 
+            href={twitterLink}
+            target="_blank"
+            color="inherit"
+          >
+            @moiseshp
+          </Link>
+        </Typography>
         <div className={classes.grow}/>
         <IconButton
           edge="end"

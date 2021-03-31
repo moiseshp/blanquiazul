@@ -3,13 +3,15 @@ import { useRecoilState } from 'recoil'
 import { themesState } from 'store/themes/atoms'
 import { skinThemeState } from 'store/skin/atoms'
 import { ITheme } from 'store/types/theme'
-import CheckOutlinedIcon from '@material-ui/icons/CheckOutlined'
+import {
+  CheckOutlined as CheckOutlinedIcon,
+  RadioButtonUnchecked as RadioButtonUncheckedIcon 
+} from '@material-ui/icons'
 
 // TODO: https://material-ui.com/es/styles/basics/
 const Theme = () => {
   const [themes] = useRecoilState(themesState)
   const [theme, setTheme] = useRecoilState(skinThemeState)
-  const getVariant = (id: string | undefined) => theme?.id === id ? 'contained' : 'outlined' 
   const getStyles = (theme: ITheme) => ({
     backgroundColor: theme.color?.base,
     color: theme.isDark ? 'white' : 'black'
@@ -26,10 +28,10 @@ const Theme = () => {
       </Box>
       <Grid container spacing={1}>
         {themes.map((item: ITheme) => 
-          <Grid key={item.id} item sm={6}>
+          <Grid key={item.id} item xs={6}>
             <Button
               fullWidth
-              variant={getVariant(item.id)}
+              variant="contained"
               style={getStyles(item)}
               disableElevation
               size="large"
@@ -38,7 +40,7 @@ const Theme = () => {
               {theme?.id === item.id ? (
                 <CheckOutlinedIcon />
               ) : (
-                <strong>{item.name}</strong>
+                <RadioButtonUncheckedIcon />
               )}
             </Button>
           </Grid>

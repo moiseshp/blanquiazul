@@ -11,8 +11,9 @@ const sponsor = {
   source: ''
 }
 const skin: ISkin = {
-  name: 'FARFÁN',
+  name: 'FARFAN',
   number: 10,
+  screen: '100%',
   theme,
   tshirt,
   sponsor
@@ -41,4 +42,9 @@ export const skinThemeState = atom({
 export const skinSponsorState = atom({
   key: 'skinSponsor',
   default: skin.sponsor
+})
+
+export const skinScreenState = atom({
+  key: 'skinScreen',
+  default: skin.screen
 })

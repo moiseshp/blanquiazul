@@ -18,7 +18,7 @@ const Name = () => {
         </Typography>
       </Box>
       <TextField
-        placeholder="Por ejm: FARFÁN"
+        placeholder="Por ejm: FARFAN"
         value={name}
         variant="outlined"
         fullWidth

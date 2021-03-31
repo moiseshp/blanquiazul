@@ -1,42 +1,41 @@
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 
-export const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((muitheme: Theme) =>
   createStyles({
-    drawer: ({ sidebarIsActive, sidebarWidth }): any => ({
-      width: sidebarIsActive ? sidebarWidth : 0,
-      flexShrink: 0,
-    }),
-    drawerPaper: ({ sidebarIsActive, sidebarWidth }: any) => ({
-      width: sidebarIsActive ? sidebarWidth : 0
-    }),
+    drawerPaper: {
+      width: '100%',
+      [muitheme.breakpoints.up('sm')]: {
+        width: 300,
+      }
+    },
     box: {
       borderTopStyle: 'solid',
       borderTopWidth: 1,
-      borderTopColor: theme.palette.grey[200],
+      borderTopColor: muitheme.palette.grey[200],
       height: '100%',
       overflow: 'auto',
-      scrollbarColor: `${theme.palette.grey[400]} ${theme.palette.grey[100]}`,
+      scrollbarColor: `${muitheme.palette.grey[400]} ${muitheme.palette.grey[100]}`,
       scrollbarWidth: 'thin',
       '&::-webkit-scrollbar-track': {
         boxShadow: 'inset 0 0 6px rgba(0,0,0,0.1)',
         borderRadius: 10,
-        backgroundColor: theme.palette.grey[100],
+        backgroundColor: muitheme.palette.grey[100],
       },
       '&::-webkit-scrollbar': {
         width: 6,
         height: 6,
-        backgroundColor: theme.palette.grey[400]
+        backgroundColor: muitheme.palette.grey[400]
       },
       '&::-webkit-scrollbar-thumb': {
         borderRadius: 10,
         boxShadow: 'inset 0 0 6px rgba(0,0,0,.1)',
-        backgroundColor: theme.palette.grey[400],
+        backgroundColor: muitheme.palette.grey[400],
       }
     },
     active: {
-      fontWeight: theme.typography.fontWeightBold,
+      fontWeight: muitheme.typography.fontWeightBold,
       '&.Mui-disabled': {
-        color: theme.palette.common.black
+        color: muitheme.palette.common.black
       }
     }
   })
