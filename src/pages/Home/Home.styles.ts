@@ -2,25 +2,25 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((muiTheme: Theme) =>
   createStyles({
-    root: ({ theme }) => ({
+    content: ({ theme }) => ({
       background: theme.isDark ? muiTheme.palette.background.default : muiTheme.palette.primary.main,
-      display: 'flex',
-    }),
-    content: {
       height: '100vh',
-      flexGrow: 1,
       padding: 0,
-      position: 'relative',
-    },
+      zIndex: 0,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }),
     container: ({ theme, screen, breakpoint }: any) => ({
       background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.base})`,
       height: breakpoint === 'xs' ? '100%' : screen.height,
       width: breakpoint === 'xs' ? '100%' : screen.width,
-      left: '50%',
-      top: '50%',
       position: 'relative',
-      transform: 'translate(-50%, -50%)',
       zIndex: 1,
+      overflow: 'hidden',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       '&:before': {
         content: '""',
         background: `linear-gradient(bottom, transparent, ${theme.color?.dark})`,
@@ -38,16 +38,11 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       padding: 0,
-      position: 'absolute',
-      left: '50%',
-      top: '50%',
+      position: 'relative',
       margin: 0,
       border: 0,
-      paddingTop: screen.tshirt.paddingTop,
       height: screen.tshirt.height,
       width: screen.tshirt.width,
-      marginTop: screen.tshirt.marginTop,
-      marginLeft: screen.tshirt.marginLeft,
       '&:before': {
         backgroundImage: `radial-gradient(${theme.color?.dark} 5%, transparent 50%)`,
         content: '""',

@@ -5,11 +5,8 @@ const screens = [
     height: 720,
     icon: 'PhoneIphone',
     tshirt: {
-      paddingTop: 10,
       height: 450,
       width: 360,
-      marginTop: -225,
-      marginLeft: -180,
       name: {
         top: 120,
         fontSize: 50
@@ -26,11 +23,8 @@ const screens = [
     height: 675,
     icon: 'FlipToFrontOutlined',
     tshirt: {
-      paddingTop: 10,
       height: 495,
       width: 396,
-      marginTop: -247,       
-      marginLeft: -198,
       name: {
         top: 133,
         fontSize: 53
@@ -47,11 +41,8 @@ const screens = [
     height: '100%',
     icon: 'AspectRatio',
     tshirt: {
-      paddingTop: 25,
       height: 600,
       width: 480,
-      marginTop: -300,  
-      marginLeft: -240,
       name: {
         top: 162,
         fontSize: 67

@@ -14,7 +14,7 @@ const skin: ISkin = {
   number: 10,
   screen,
   theme,
-  tshirt,
+  tshirt
 }
 
 export const skinNameState = atom({

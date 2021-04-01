@@ -7,11 +7,8 @@ interface IScreen {
   height?: Number | string
   icon?: string
   tshirt: {
-    paddingTop?: Number
     height?: Number | string
     width?: Number | string
-    marginTop?: Number | string
-    marginLeft?: Number | string
   }
 }
 

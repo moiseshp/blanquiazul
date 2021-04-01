@@ -1,3 +1,4 @@
+import React from 'react'
 import Sidebar from 'components/Sidebar'
 import Header from 'components/Header'
 import { useStyles } from './Home.styles'
@@ -13,18 +14,19 @@ const Home = () => {
   const [screen] = useRecoilState(skinScreenState)
   const breakpoint = useBreakpoint()
   const classes = useStyles({ theme, screen, tshirt, breakpoint })
+  const htmlDivElementRef = React.useRef<HTMLDivElement>(null)
   return (
-    <div className={classes.root}>
+    <div>
       <Header />
       <main className={classes.content}>
-        <article className={classes.container}>
+        <div className={classes.container} ref={htmlDivElementRef}>
           <fieldset className={classes.tshirtWrapper}>
             <TshirtName />
             <TshirtNumber />
           </fieldset>
-        </article>
+        </div>
       </main>
-      <Sidebar />
+      <Sidebar htmlDivElementRef={htmlDivElementRef} />
     </div>
   )
 }

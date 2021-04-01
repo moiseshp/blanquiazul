@@ -8,7 +8,8 @@ import Name from './Name'
 import Number from './Number'
 import Tshirt from './Tshirt'
 import Theme from './Theme'
-const Sidebar = () => {
+
+const Sidebar = ({ htmlDivElementRef }: any) => {
   const [sidebarIsActive] = useRecoilState(sidebarIsActiveState)
   const classes = useStyles()
   return (
@@ -31,7 +32,7 @@ const Sidebar = () => {
         <Divider />
         <Tshirt />
       </Box>
-      <Footer />
+      <Footer htmlDivElementRef={htmlDivElementRef} />
     </Drawer>
   )
 }

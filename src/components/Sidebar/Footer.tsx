@@ -1,10 +1,24 @@
-import { AppBar, Box, Button, Hidden } from '@material-ui/core'
+import React from 'react'
+import { AppBar, Box, Button, CircularProgress, Hidden } from '@material-ui/core'
 import AspectRatio from './AspectRatio'
-// import { useRecoilState } from 'recoil'
-// import { sidebarIsActiveState } from 'store/sidebar/atoms'
+import { downloadLink } from 'utils/helpers'
+import domtoimage from 'dom-to-image'
 
-const Header = () => {
-  // const [sidebarIsActive, setSidebarIsActive] = useRecoilState(sidebarIsActiveState)
+
+const Header = ({ htmlDivElementRef }: any) => {
+  const [loading, setLoading] = React.useState<boolean>(false)
+  const handleSaveImage = () => {
+    setLoading(true)
+    domtoimage.toPng(htmlDivElementRef.current)
+      .then((data: string) => {
+        downloadLink(data, 'png')
+      })
+      .catch((error) => {
+        console.error('oops, something went wrong!', error)
+      })
+      .finally(() => setLoading(false))
+  }
+
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Box p={2}>
@@ -18,8 +32,10 @@ const Header = () => {
           color="secondary"
           size="large"
           fullWidth
+          onClick={handleSaveImage}
+          disabled={loading}
         >
-          Guardar imagen
+          {loading ? (<CircularProgress size={28} />) : 'Guardar imagen'}
         </Button>
       </Box>
     </AppBar>
