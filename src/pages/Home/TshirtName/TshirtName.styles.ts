@@ -2,7 +2,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((muitheme: Theme) =>
   createStyles({
-    root: {
+    root: ({ screen }: any) => ({
       width: '100%',
       textAlign: 'center',
       position: 'absolute',
@@ -12,16 +12,8 @@ export const useStyles = makeStyles((muitheme: Theme) =>
       textShadow: '1px 1px 2px #FFF',
       transform: 'translate(-50%, -50%)',
       letterSpacing: 1,
-      top: 103,
-      fontSize: 37,
-      [muitheme.breakpoints.up('md')]: {
-        top: 120,
-        fontSize: 42,  
-      },
-      [muitheme.breakpoints.up('lg')]: {
-        top: 160,
-        fontSize: 60,  
-      }
-    }
+      top: screen.tshirt.name.top,
+      fontSize: screen.tshirt.name.fontSize
+    })
   })
 )

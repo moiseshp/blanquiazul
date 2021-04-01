@@ -1,8 +1,7 @@
-import { Box, Button, Checkbox, FormControlLabel, Grid, Typography } from '@material-ui/core'
+import { Box, Button, Grid, Typography } from '@material-ui/core'
 import { useRecoilState } from 'recoil'
 import { tshirtsState } from 'store/tshirts/atoms'
 import { skinTshirtState } from 'store/skin/atoms'
-import { skinSponsorState } from 'store/skin/atoms'
 import {
   CheckOutlined as CheckOutlinedIcon,
   RadioButtonUnchecked as RadioButtonUncheckedIcon 
@@ -14,18 +13,11 @@ import { ITshirt } from 'store/types/tshirt'
 const Tshirt = () => {
   const [tshirts] = useRecoilState(tshirtsState)
   const [tshirt] = useRecoilState(skinTshirtState)
-  const [sponsor, setSponsor] = useRecoilState(skinSponsorState)
   const getColor = (id: string | undefined) => tshirt?.id === id ? 'primary' : 'inherit' 
   const getStyles = (tshirt: ITshirt) => ({
     backgroundColor: tshirt.color,
     color: tshirt.isDark ? 'white' : 'black'
   }) 
-  const handleSponsor = () => {
-    setSponsor({
-      ...sponsor,
-      isActive: !sponsor?.isActive
-    })
-  }
   return (
     <Box p={2}>
       <Box mb={1}>
@@ -57,12 +49,6 @@ const Tshirt = () => {
           </Grid>
         )}
       </Grid>
-      <Box mt={1}>
-        <FormControlLabel
-          control={<Checkbox checked={sponsor?.isActive} onChange={handleSponsor} />}
-          label="Mostrar sponsors"
-        />
-      </Box>
     </Box>
   )
 }

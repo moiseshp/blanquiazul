@@ -11,7 +11,7 @@ const Number = () => {
   const [more, setMore] = useState<boolean>(false)
   const handleNumber = (value: Number) => setNumber(value)
   const getVariant = (value: Number) => number === value  ? 'contained' : 'outlined'
-  const getColor = (value: Number) => number === value  ? 'secondary' : 'inherit'
+  const getColor = (value: Number) => number === value  ? 'primary' : 'inherit'
   const getDisplay = (value: Number) => {
     if (value > maxNumberToDisplay && !more) return 'none'
     return 'block'

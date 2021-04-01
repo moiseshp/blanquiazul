@@ -19,9 +19,6 @@ const theme = {
     },
   },
   palette: {
-    // background: {
-    //   default: '#ffffff'
-    // },
     primary: {
       main: '#060915',
     },

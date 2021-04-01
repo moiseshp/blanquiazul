@@ -8,8 +8,12 @@ export const useStyles = makeStyles((muitheme: Theme) =>
     grow: {
       flexGrow: 1,
     },
-    typography: {
-      color: muitheme.palette.grey[400]
-    }
+    iconButton: ({ theme }: any) => ({
+      backgroundColor: theme.color.dark,
+      color: 'white',
+      '&:hover': {
+        backgroundColor: theme.color.dark,
+      }
+    })
   })
 )

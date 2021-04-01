@@ -8,7 +8,6 @@ import {
   RadioButtonUnchecked as RadioButtonUncheckedIcon 
 } from '@material-ui/icons'
 
-// TODO: https://material-ui.com/es/styles/basics/
 const Theme = () => {
   const [themes] = useRecoilState(themesState)
   const [theme, setTheme] = useRecoilState(skinThemeState)
@@ -28,7 +27,7 @@ const Theme = () => {
       </Box>
       <Grid container spacing={1}>
         {themes.map((item: ITheme) => 
-          <Grid key={item.id} item xs={6}>
+          <Grid key={item.id} item xs={4}>
             <Button
               fullWidth
               variant="contained"

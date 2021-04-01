@@ -2,21 +2,19 @@ import { atom } from 'recoil'
 import { ISkin } from 'store/types/skin'
 import themes from 'utils/themes'
 import tshirts from 'utils/tshirts'
+import screens from 'utils/screens'
 
 const defaultName = 'main'
 const theme = themes.find(({ id }) => id === defaultName)
 const tshirt = tshirts.find(({ id }) => id === defaultName)
-const sponsor = {
-  isActive: true,
-  source: ''
-}
+const screen = screens.find(({ id }) => id === 'small')
+
 const skin: ISkin = {
   name: 'FARFAN',
   number: 10,
-  screen: '100%',
+  screen,
   theme,
   tshirt,
-  sponsor
 }
 
 export const skinNameState = atom({
@@ -37,11 +35,6 @@ export const skinTshirtState = atom({
 export const skinThemeState = atom({
   key: 'skinTheme',
   default: skin.theme
-})
-
-export const skinSponsorState = atom({
-  key: 'skinSponsor',
-  default: skin.sponsor
 })
 
 export const skinScreenState = atom({

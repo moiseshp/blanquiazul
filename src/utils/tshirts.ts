@@ -3,7 +3,7 @@ const tshirts = [
     id: 'main',
     name: 'Principal',
     color: '#2E3548',
-    source: `${process.env.PUBLIC_URL}/tshirt-sponsors.png)`,
+    source: 'TShirtMain.png',
     isDark: true
   },
   {

@@ -5,7 +5,7 @@ export const useStyles = makeStyles((muitheme: Theme) =>
     drawerPaper: {
       width: '100%',
       [muitheme.breakpoints.up('sm')]: {
-        width: 300,
+        width: 320,
       }
     },
     box: {
@@ -16,26 +16,22 @@ export const useStyles = makeStyles((muitheme: Theme) =>
       overflow: 'auto',
       scrollbarColor: `${muitheme.palette.grey[400]} ${muitheme.palette.grey[100]}`,
       scrollbarWidth: 'thin',
-      '&::-webkit-scrollbar-track': {
-        boxShadow: 'inset 0 0 6px rgba(0,0,0,0.1)',
-        borderRadius: 10,
-        backgroundColor: muitheme.palette.grey[100],
-      },
-      '&::-webkit-scrollbar': {
-        width: 6,
-        height: 6,
-        backgroundColor: muitheme.palette.grey[400]
-      },
-      '&::-webkit-scrollbar-thumb': {
-        borderRadius: 10,
-        boxShadow: 'inset 0 0 6px rgba(0,0,0,.1)',
-        backgroundColor: muitheme.palette.grey[400],
-      }
-    },
-    active: {
-      fontWeight: muitheme.typography.fontWeightBold,
-      '&.Mui-disabled': {
-        color: muitheme.palette.common.black
+      [muitheme.breakpoints.up('sm')]: {
+        '&::-webkit-scrollbar-track': {
+          boxShadow: 'inset 0 0 6px rgba(0,0,0,0.1)',
+          borderRadius: 10,
+          backgroundColor: muitheme.palette.grey[100],
+        },
+        '&::-webkit-scrollbar': {
+          width: 6,
+          height: 6,
+          backgroundColor: muitheme.palette.grey[400]
+        },
+        '&::-webkit-scrollbar-thumb': {
+          borderRadius: 10,
+          boxShadow: 'inset 0 0 6px rgba(0,0,0,.1)',
+          backgroundColor: muitheme.palette.grey[400],
+        }
       }
     }
   })
