@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((muiTheme: Theme) =>
   createStyles({
     content: ({ theme }) => ({
-      background: theme.isDark ? muiTheme.palette.background.default : muiTheme.palette.primary.main,
+      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.base})`,
       height: '100vh',
       padding: 0,
       zIndex: 0,
