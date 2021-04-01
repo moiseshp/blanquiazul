@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/theskin/static/css/main.e73cbf5e.chunk.css",
-    "main.js": "/theskin/static/js/main.4f454935.chunk.js",
-    "main.js.map": "/theskin/static/js/main.4f454935.chunk.js.map",
+    "main.js": "/theskin/static/js/main.691b4cc5.chunk.js",
+    "main.js.map": "/theskin/static/js/main.691b4cc5.chunk.js.map",
     "runtime-main.js": "/theskin/static/js/runtime-main.f2ee95b4.js",
     "runtime-main.js.map": "/theskin/static/js/runtime-main.f2ee95b4.js.map",
     "static/js/2.517365f4.chunk.js": "/theskin/static/js/2.517365f4.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f2ee95b4.js",
     "static/js/2.517365f4.chunk.js",
     "static/css/main.e73cbf5e.chunk.css",
-    "static/js/main.4f454935.chunk.js"
+    "static/js/main.691b4cc5.chunk.js"
   ]
 }
