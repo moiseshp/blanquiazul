@@ -17,7 +17,6 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
       width: breakpoint === 'xs' ? '100%' : screen.width,
       position: 'relative',
       zIndex: 1,
-      overflow: 'hidden',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
