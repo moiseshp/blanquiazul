@@ -1,5 +1,5 @@
-import { AppBar, IconButton, Link, Toolbar, Typography } from '@material-ui/core'
-import {  TuneOutlined as TuneOutlinedIcon } from '@material-ui/icons'
+import { AppBar, Button, Hidden, Link, Toolbar, Typography } from '@material-ui/core'
+import { ArrowForward as ArrowForwardIcon } from '@material-ui/icons'
 import { useRecoilState } from 'recoil'
 import { sidebarIsActiveState } from 'store/sidebar/atoms'
 import { skinThemeState } from 'store/skin/atoms'
@@ -19,23 +19,23 @@ const Navbar = () => {
     >
       <Toolbar>
         <Typography variant="body2">
-          <Link 
+          {/* <Link 
             href={twitterLink}
             target="_blank"
             color="inherit"
           >
             @moiseshp
-          </Link>
+          </Link> */}
         </Typography>
         <div className={classes.grow}/>
-        <IconButton
-          edge="end"
+        <Button
           color="default" 
+          className={classes.button}
+          endIcon={<ArrowForwardIcon />}
           onClick={() => setSidebarIsActive(!sidebarIsActive)}
-          className={classes.iconButton}
         >
-          <TuneOutlinedIcon /> 
-        </IconButton>
+          Personaliza <Hidden xsDown>tu camiseta</Hidden>
+        </Button>
       </Toolbar>
     </AppBar>
   )

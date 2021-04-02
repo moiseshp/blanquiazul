@@ -9,7 +9,12 @@ export const scaleImageTo = (scale: number, node: any) => ({
   height: node.offsetHeight * scale,
   width: node.offsetWidth * scale,
   style: {
-    transform: `scale(${scale})`,
+    '-webkit-transform': `scale(${scale})`,
+    // transform: `scale(${scale})`,
+    // '-ms-transform': `scale(${scale}, ${scale})`,
+    // '-moz-transform': `scale(${scale}, ${scale})`,
+    // '-o-transform': `scale(${scale}, ${scale})`,
+    '-webkit-transform-origin': 'top left',
     transformOrigin: 'top left',
     width: `${node.offsetWidth}px`,
     height: `${node.offsetHeight}px`

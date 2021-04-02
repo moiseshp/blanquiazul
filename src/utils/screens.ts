@@ -8,7 +8,7 @@ const screens = [
       height: 450,
       width: 360,
       name: {
-        top: 120,
+        top: 121,
         fontSize: 50
       },
       number: {
