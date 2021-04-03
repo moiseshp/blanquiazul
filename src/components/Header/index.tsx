@@ -18,7 +18,9 @@ const Navbar = () => {
     >
       <Toolbar>
         <InfoDialog />
-        <ShareButton />
+        <Hidden mdUp>
+          <ShareButton />
+        </Hidden>
         <div className={classes.grow}/>
         <Button
           color="inherit" 

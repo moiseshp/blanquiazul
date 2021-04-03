@@ -43,7 +43,7 @@ const InfoDialog = () => {
           </Typography>
           <br />
           <Typography color="textSecondary">
-            Este es un proyecto personal desarrollado por <Link href={process.env.REACT_APP_TWITTER} target="_blank">@moiseseduardohp</Link>. Si quieres que la camiseta del pueblo siga siendo una de las indumentarias más vendidas en Perú y en todo el continente visita las tiendas oficiales de <Link href={process.env.REACT_APP_NIKE} target="_blank">Nike</Link>. 
+            Este es un proyecto personal desarrollado por <Link href={process.env.REACT_APP_TWITTER} target="_blank">{process.env.REACT_APP_CREATED_BY}</Link>. Si quieres que la camiseta del pueblo siga siendo una de las indumentarias más vendidas en Perú y en todo el continente visita las tiendas oficiales de <Link href={process.env.REACT_APP_NIKE} target="_blank">Nike</Link>. 
           </Typography>
           <br />
           <Typography color="textSecondary">
