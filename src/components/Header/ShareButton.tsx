@@ -5,7 +5,6 @@ const ShareButton = () => {
     if (navigator.share) {
       navigator.share({
         title: document.title,
-        text: window.location.href,
         url: window.location.href
       })
       .then()
