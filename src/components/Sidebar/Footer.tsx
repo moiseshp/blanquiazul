@@ -7,16 +7,12 @@ import domtoimage from 'dom-to-image'
 
 const Header = ({ htmlDivElementRef }: any) => {
   const [loading, setLoading] = React.useState<boolean>(false)
-  const handleSaveImage = () => {
+  const handleSaveImage = async () => {
     setLoading(true)
-    domtoimage.toJpeg(htmlDivElementRef.current, scaleImageTo(3, htmlDivElementRef.current))
-      .then((data: string) => {
-        downloadLink(data, 'png')
-      })
-      .catch((error) => {
-        console.error('oops, something went wrong!', error)
-      })
-      .finally(() => setLoading(false))
+    const currentRef = htmlDivElementRef.current
+    const dataUrl = await domtoimage.toJpeg(currentRef, scaleImageTo(3, currentRef))
+    downloadLink(dataUrl, 'png')
+    setLoading(false)
   }
 
   return (
