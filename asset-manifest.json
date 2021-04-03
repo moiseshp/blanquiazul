@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/theskin/static/css/main.e73cbf5e.chunk.css",
-    "main.js": "/theskin/static/js/main.6e9185fd.chunk.js",
-    "main.js.map": "/theskin/static/js/main.6e9185fd.chunk.js.map",
-    "runtime-main.js": "/theskin/static/js/runtime-main.ae7ac84b.js",
-    "runtime-main.js.map": "/theskin/static/js/runtime-main.ae7ac84b.js.map",
-    "static/js/2.0856ede8.chunk.js": "/theskin/static/js/2.0856ede8.chunk.js",
-    "static/js/2.0856ede8.chunk.js.map": "/theskin/static/js/2.0856ede8.chunk.js.map",
-    "static/js/3.999c8e4a.chunk.js": "/theskin/static/js/3.999c8e4a.chunk.js",
-    "static/js/3.999c8e4a.chunk.js.map": "/theskin/static/js/3.999c8e4a.chunk.js.map",
+    "main.js": "/theskin/static/js/main.f1e23838.chunk.js",
+    "main.js.map": "/theskin/static/js/main.f1e23838.chunk.js.map",
+    "runtime-main.js": "/theskin/static/js/runtime-main.981f6e10.js",
+    "runtime-main.js.map": "/theskin/static/js/runtime-main.981f6e10.js.map",
+    "static/js/2.b9b7f110.chunk.js": "/theskin/static/js/2.b9b7f110.chunk.js",
+    "static/js/2.b9b7f110.chunk.js.map": "/theskin/static/js/2.b9b7f110.chunk.js.map",
+    "static/js/3.f0a51052.chunk.js": "/theskin/static/js/3.f0a51052.chunk.js",
+    "static/js/3.f0a51052.chunk.js.map": "/theskin/static/js/3.f0a51052.chunk.js.map",
     "index.html": "/theskin/index.html",
     "static/css/main.e73cbf5e.chunk.css.map": "/theskin/static/css/main.e73cbf5e.chunk.css.map",
-    "static/js/2.0856ede8.chunk.js.LICENSE.txt": "/theskin/static/js/2.0856ede8.chunk.js.LICENSE.txt",
+    "static/js/2.b9b7f110.chunk.js.LICENSE.txt": "/theskin/static/js/2.b9b7f110.chunk.js.LICENSE.txt",
     "static/media/NikeCroatia2020.css": "/theskin/static/media/croatia-2020.a42864aa.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.ae7ac84b.js",
-    "static/js/2.0856ede8.chunk.js",
+    "static/js/runtime-main.981f6e10.js",
+    "static/js/2.b9b7f110.chunk.js",
     "static/css/main.e73cbf5e.chunk.css",
-    "static/js/main.6e9185fd.chunk.js"
+    "static/js/main.f1e23838.chunk.js"
   ]
 }
