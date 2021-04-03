@@ -1,19 +1,12 @@
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
 
-export const useStyles = makeStyles((muitheme: Theme) =>
+export const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      color: 'white',
+      color: 'white'
     },
     grow: {
-      flexGrow: 1,
-    },
-    button: ({ theme }: any) => ({
-      backgroundColor: theme.color.dark,
-      color: 'white',
-      '&:hover': {
-        backgroundColor: theme.color.dark,
-      }
-    })
+      flexGrow: 1
+    }
   })
 )

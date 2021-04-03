@@ -1,8 +1,9 @@
 export const downloadLink = (data: string, type: string): void => {
-  const link = document.createElement('a')
-  link.download = filename(type)
-  link.href = data
-  link.click()
+  const a = document.createElement('a')
+  a.download = filename(type)
+  a.title = process.env.REACT_APP_NAME || 'image title'
+  a.href = data
+  a.click()
 }
 
 export const scaleImageTo = (scale: number, node: any) => ({

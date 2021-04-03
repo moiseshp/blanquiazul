@@ -9,7 +9,7 @@ const Header = ({ htmlDivElementRef }: any) => {
   const [loading, setLoading] = React.useState<boolean>(false)
   const handleSaveImage = () => {
     setLoading(true)
-    domtoimage.toPng(htmlDivElementRef.current, scaleImageTo(3, htmlDivElementRef.current))
+    domtoimage.toJpeg(htmlDivElementRef.current, scaleImageTo(3, htmlDivElementRef.current))
       .then((data: string) => {
         downloadLink(data, 'png')
       })

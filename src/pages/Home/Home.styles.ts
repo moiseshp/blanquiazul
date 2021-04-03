@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((muiTheme: Theme) =>
   createStyles({
     content: ({ theme }) => ({
-      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.base})`,
+      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
       height: '100vh',
       padding: 0,
       zIndex: 0,
@@ -12,7 +12,7 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
       alignItems: 'center'
     }),
     container: ({ theme, screen, breakpoint }: any) => ({
-      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.base})`,
+      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
       height: breakpoint === 'xs' ? '100%' : screen.height,
       width: breakpoint === 'xs' ? '100%' : screen.width,
       position: 'relative',
@@ -20,6 +20,7 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      boxShadow: '0 0 0 15px rgba(255, 255, 255, .75)',
       '&:before': {
         content: '""',
         background: `linear-gradient(bottom, transparent, ${theme.color?.dark})`,

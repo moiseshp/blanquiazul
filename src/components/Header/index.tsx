@@ -1,15 +1,14 @@
-import { AppBar, Button, Hidden, Link, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, Button, Hidden, Toolbar } from '@material-ui/core'
 import { ArrowForward as ArrowForwardIcon } from '@material-ui/icons'
 import { useRecoilState } from 'recoil'
 import { sidebarIsActiveState } from 'store/sidebar/atoms'
-import { skinThemeState } from 'store/skin/atoms'
 import { useStyles } from './Header.styles'
+import InfoDialog from './InfoDialog'
+import ShareButton from './ShareButton'
 
 const Navbar = () => {
   const [sidebarIsActive, setSidebarIsActive] = useRecoilState(sidebarIsActiveState)
-  const [theme] = useRecoilState(skinThemeState)
-  const classes = useStyles({ theme })
-  const twitterLink = process.env.REACT_APP_TWITTER
+  const classes = useStyles()
   return (
     <AppBar
       position="fixed"
@@ -18,19 +17,11 @@ const Navbar = () => {
       color="transparent"
     >
       <Toolbar>
-        <Typography variant="body2">
-          {/* <Link 
-            href={twitterLink}
-            target="_blank"
-            color="inherit"
-          >
-            @moiseshp
-          </Link> */}
-        </Typography>
+        <InfoDialog />
+        <ShareButton />
         <div className={classes.grow}/>
         <Button
-          color="default" 
-          className={classes.button}
+          color="inherit" 
           endIcon={<ArrowForwardIcon />}
           onClick={() => setSidebarIsActive(!sidebarIsActive)}
         >
