@@ -6,6 +6,11 @@ export const downloadLink = (data: string, type: string): void => {
   a.click()
 }
 
+const filename = (type: string) => {
+  const date = new Date()
+  return `2021--LA-PIEL--${date.getTime()}.${type}`
+}
+
 export const scaleImageTo = (scale: number, node: any) => ({
   height: node.offsetHeight * scale,
   width: node.offsetWidth * scale,
@@ -22,7 +27,6 @@ export const scaleImageTo = (scale: number, node: any) => ({
   }
 })
 
-const filename = (type: string) => {
-  const date = new Date()
-  return `2021--LA-PIEL--${date.getTime()}.${type}`
+export const mobileCheck = () => {
+  return (typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1)
 }

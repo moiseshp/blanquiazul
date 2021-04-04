@@ -2,17 +2,15 @@ import { atom } from 'recoil'
 import { ISkin } from 'store/types/skin'
 import themes from 'utils/themes'
 import tshirts from 'utils/tshirts'
-import screens from 'utils/screens'
 
 const defaultName = 'main'
 const theme = themes.find(({ id }) => id === defaultName)
 const tshirt = tshirts.find(({ id }) => id === defaultName)
-const screen = screens.find(({ id }) => id === 'small')
 
 const skin: ISkin = {
   name: 'FARFAN',
   number: 10,
-  screen,
+  screen: undefined,
   theme,
   tshirt
 }

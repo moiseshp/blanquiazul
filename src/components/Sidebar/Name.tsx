@@ -1,12 +1,17 @@
 import { Box, TextField, Typography } from '@material-ui/core'
 import { useRecoilState } from 'recoil'
 import { skinNameState } from 'store/skin/atoms'
-
+const maxCharacters = 12
 const Name = () => {
   const [name, setName] = useRecoilState(skinNameState)
   const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setName(event.target.value.toUpperCase())
+    const value = event.target.value.toUpperCase()
+    const regExp = /^[a-zA-Z.\b ]+$/
+    if (value === '' || regExp.test(value)) {
+      if (maxCharacters > value.length) setName(value)    
+    }
   }
+
   return (
     <Box p={2}>
       <Box mb={1}>

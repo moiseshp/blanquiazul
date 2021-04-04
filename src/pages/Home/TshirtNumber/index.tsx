@@ -1,7 +1,6 @@
 import { skinNumberState, skinScreenState } from 'store/skin/atoms'
 import { useRecoilState } from 'recoil'
 import { useStyles } from './TshirtNumber.styles'
-import 'fonts/croatia/NikeCroatia2020.css'
 
 const TshirtNumber = () => {
   const [number] = useRecoilState(skinNumberState)

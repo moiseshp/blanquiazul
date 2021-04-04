@@ -6,12 +6,8 @@ const theme = {
       'Arial',
       'sans-serif'
     ].join(','),
-    // fontWeightRegular: 300,
     fontWeightSemiBold: 700,
-    fontWeightBold: 900,
-    button: {
-      // fontWeight: 800,
-    },
+    fontWeightBold: 900
   },
   props: {
     MuiButton: {

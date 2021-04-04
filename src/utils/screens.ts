@@ -1,6 +1,6 @@
 const screens = [
   {
-    id: 'small',
+    id: 'mobile',
     width: 360,
     height: 720,
     icon: 'PhoneIphone',
@@ -13,33 +13,15 @@ const screens = [
       },
       number: {
         top: 230,
-        fontSize: 210  
+        fontSize: 205
       }
     }
   },
   {
-    id: 'medium',
-    width: 675,
-    height: 675,
-    icon: 'FlipToFrontOutlined',
-    tshirt: {
-      height: 495,
-      width: 396,
-      name: {
-        top: 133,
-        fontSize: 53
-      },
-      number: {
-        top: 255,
-        fontSize: 240  
-      }
-    }
-  },
-  {
-    id: 'large',
+    id: 'desktop',
     width: '100%',
     height: '100%',
-    icon: 'AspectRatio',
+    icon: 'DesktopWindowsOutlined',
     tshirt: {
       height: 600,
       width: 480,

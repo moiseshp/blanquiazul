@@ -2,16 +2,27 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((muiTheme: Theme) =>
   createStyles({
-    content: ({ theme }) => ({
-      background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
+    content: ({ breakpoint, screen, theme }) => ({
+      background: `linear-gradient(bottom, ${theme.color?.base}, ${theme.color?.dark})`,
       padding: 0,
       zIndex: 0,
+      '&:before': {
+        position: 'absolute',
+        left: '50%',
+        right: '50%',
+        content: '""',
+        background: 'white',
+        width: breakpoint !== 'xs' ? screen?.width + 20 : '100%',
+        height: breakpoint !== 'xs' ? screen?.height + 90 : '100%',
+        transform: 'translateX(-50%)',
+        borderRadius: 30,
+        boxShadow: `0 0 50px 5px ${theme.color?.dark}`
+      }
     }),
     container: ({ theme }: any) => ({
       background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
       position: 'relative',
       zIndex: 1,
-      boxShadow: '0 0 0 15px rgba(255, 255, 255, .75)',
       '&:before': {
         content: '""',
         background: `linear-gradient(bottom, transparent, ${theme.color?.dark})`,

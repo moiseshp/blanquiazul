@@ -15,7 +15,7 @@ interface IScreen {
 export interface ISkin {
   name?: string
   number?: Number
-  screen?: IScreen
+  screen?: IScreen | undefined
   theme?: ITheme
   tshirt?: ITshirt
 }

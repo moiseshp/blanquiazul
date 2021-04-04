@@ -47,7 +47,7 @@ const InfoDialog = () => {
           </Typography>
           <br />
           <Typography color="textSecondary">
-            Visita la web de <Link href={process.env.REACT_APP_AOC} target="_blank">AOC</Link> y <Link href={process.env.REACT_APP_DORADOBET} target="_blank">Dorado Bet</Link>.
+            Los logotipos de las marcas auspiciadoras le pertenecen a <Link href={process.env.REACT_APP_AOC} target="_blank">AOC</Link> y <Link href={process.env.REACT_APP_DORADOBET} target="_blank">Dorado Bet</Link> respectivamente.
           </Typography>
         </DialogContent>
         <DialogActions>

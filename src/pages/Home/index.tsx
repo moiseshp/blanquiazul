@@ -8,14 +8,29 @@ import Header from 'components/Header'
 import useBreakpoint from 'hooks/useBreakpoint'
 import TshirtName from './TshirtName'
 import TshirtNumber from './TshirtNumber'
+import Preloader from 'components/Preloader'
+import screens from 'utils/screens'
+import { mobileCheck } from 'utils/helpers'
+import 'fonts/croatia/NikeCroatia2020.css'
 
 const Home = () => {
   const [tshirt] = useRecoilState(skinTshirtState)
   const [theme] = useRecoilState(skinThemeState)
-  const [screen] = useRecoilState(skinScreenState)
+  const [screen, setScreen] = useRecoilState(skinScreenState)
   const breakpoint = useBreakpoint()
-  const classes = useStyles({ theme, tshirt })
+  const classes = useStyles({ breakpoint, theme, tshirt, screen })
   const htmlDivElementRef = React.useRef<HTMLDivElement>(null)
+
+  React.useEffect(() => {
+    let screenId = 'desktop'
+    if (mobileCheck()) screenId = 'mobile'
+    const getScreen = screens.find(item => item.id === screenId)
+    setScreen(getScreen)
+  }, [setScreen])
+
+  if (!screen) {
+    return <Preloader />
+  }
 
   return (
     <React.Fragment>
@@ -25,7 +40,8 @@ const Home = () => {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        className={classes.content}>
+        className={classes.content}
+      >
         <Box
           display="flex"
           justifyContent="center"

@@ -9,7 +9,6 @@ import {
 
 import { ITshirt } from 'store/types/tshirt'
 
-// TODO: https://material-ui.com/es/styles/basics/
 const Tshirt = () => {
   const [tshirts] = useRecoilState(tshirtsState)
   const [tshirt] = useRecoilState(skinTshirtState)
