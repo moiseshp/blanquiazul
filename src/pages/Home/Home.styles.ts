@@ -4,22 +4,13 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
   createStyles({
     content: ({ theme }) => ({
       background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
-      height: '100vh',
       padding: 0,
       zIndex: 0,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center'
     }),
-    container: ({ theme, screen, breakpoint }: any) => ({
+    container: ({ theme }: any) => ({
       background: `radial-gradient(circle, ${theme.color?.light}, ${theme.color?.dark})`,
-      height: breakpoint === 'xs' ? '100%' : screen.height,
-      width: breakpoint === 'xs' ? '100%' : screen.width,
       position: 'relative',
       zIndex: 1,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
       boxShadow: '0 0 0 15px rgba(255, 255, 255, .75)',
       '&:before': {
         content: '""',
@@ -32,7 +23,7 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
         zIndex: 0
       }
     }),
-    tshirtWrapper: ({ screen, theme, tshirt }: any) => ({
+    tshirtWrapper: ({ theme, tshirt }: any) => ({
       backgroundImage: `url(${process.env.PUBLIC_URL}/images/${tshirt.source})`,
       backgroundSize: 'auto 100%',
       backgroundPosition: 'center',
@@ -41,8 +32,6 @@ export const useStyles = makeStyles((muiTheme: Theme) =>
       position: 'relative',
       margin: 0,
       border: 0,
-      height: screen.tshirt.height,
-      width: screen.tshirt.width,
       '&:before': {
         backgroundImage: `radial-gradient(${theme.color?.dark} 5%, transparent 50%)`,
         content: '""',

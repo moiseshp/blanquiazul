@@ -3,15 +3,20 @@ import { AppBar, Box, Button, CircularProgress, Hidden } from '@material-ui/core
 import AspectRatio from './AspectRatio'
 import { downloadLink, scaleImageTo } from 'utils/helpers'
 import domtoimage from 'dom-to-image'
-
-
+import Bowser from 'bowser'
 const Header = ({ htmlDivElementRef }: any) => {
   const [loading, setLoading] = React.useState<boolean>(false)
+  const browser = Bowser.getParser(window.navigator.userAgent)
   const handleSaveImage = async () => {
-    setLoading(true)
     const currentRef = htmlDivElementRef.current
-    const dataUrl = await domtoimage.toJpeg(currentRef, scaleImageTo(3, currentRef))
-    downloadLink(dataUrl, 'png')
+    setLoading(true)
+    if (browser.getBrowserName().toLowerCase() === 'safari') {
+      const dataUrl = await domtoimage.toSvg(currentRef, scaleImageTo(2, currentRef))
+      downloadLink(dataUrl, 'svg')
+    } else {
+      const dataUrl = await domtoimage.toJpeg(currentRef, scaleImageTo(2, currentRef))
+      downloadLink(dataUrl, 'jpg')
+    }
     setLoading(false)
   }
 

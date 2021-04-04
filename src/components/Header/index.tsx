@@ -5,10 +5,12 @@ import { sidebarIsActiveState } from 'store/sidebar/atoms'
 import { useStyles } from './Header.styles'
 import InfoDialog from './InfoDialog'
 import ShareButton from './ShareButton'
+import Bowser from 'bowser'
 
 const Navbar = () => {
   const [sidebarIsActive, setSidebarIsActive] = useRecoilState(sidebarIsActiveState)
   const classes = useStyles()
+  const browser = Bowser.getParser(window.navigator.userAgent)
   return (
     <AppBar
       position="fixed"
@@ -18,9 +20,9 @@ const Navbar = () => {
     >
       <Toolbar>
         <InfoDialog />
-        <Hidden mdUp>
+        {browser.getPlatformType() === 'mobile' && (
           <ShareButton />
-        </Hidden>
+        )}
         <div className={classes.grow}/>
         <Button
           color="inherit" 
