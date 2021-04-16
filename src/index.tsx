@@ -1,12 +1,9 @@
 import ReactDOM from 'react-dom'
-import { RecoilRoot } from 'recoil'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
-  <RecoilRoot>
-    <App />
-  </RecoilRoot>,
+  <App />,
   document.getElementById('root')
 )
 

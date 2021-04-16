@@ -3,7 +3,6 @@ import ReactGA from 'react-ga'
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
-import Home from './pages/Home'
 import theme from './theme'
 
 const App = () => {
@@ -17,7 +16,7 @@ const App = () => {
   return(
     <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
       <CssBaseline />
-      <Home />
+      Loading...
     </ThemeProvider>
   )
 }
