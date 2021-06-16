@@ -1,12 +1,13 @@
 # BLANQUIAZUL
+![enter image description here](https://moiseshp.github.io/blanquiazul/ScreeShot-Blanquiazul.png)
 
-<!-- ![](https://s3-eu-west-1.amazonaws.com/userlike-cdn-blog/20171113-development/header-development-news.png) -->
+## Descripción
+Personaliza la camiseta del equipo peruano **Alianza Lima**. Selecciona la versión principal o la alterna, elige tu número favorito y listo! ya puedes descargarlo y compartirlo en todas tus plataformas.
 
-## Acerca de
-Personaliza la camiseta de Alianza Lima
+Ingresa a **[https://moiseshp.github.io/blanquiazul/](https://moiseshp.github.io/blanquiazul/)** y comienza la diversión.
 
 ## Autor
-Proyecto desarrollado por @moiseseduardo.hp para el Hincha Blanquiazul.
+Proyecto desarrollado por @moiseseduardo.hp para todos los **Hinchas Blanquiazules**.
 
 ## Release v1.01
 Viernes 16 de abril 2021
@@ -30,7 +31,6 @@ Viernes 16 de abril 2021
     - Linear Vertical 
 - Custom Background Color: Research change color by JS
 - LocalStorage for save user info
-
 
 ## Features
 React 16.14
