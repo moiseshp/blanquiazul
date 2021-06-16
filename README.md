@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# BLANQUIAZUL
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- ![](https://s3-eu-west-1.amazonaws.com/userlike-cdn-blog/20171113-development/header-development-news.png) -->
 
-## Available Scripts
+## Acerca de
+Personaliza la camiseta de Alianza Lima
 
-In the project directory, you can run:
+## Autor
+Proyecto desarrollado por @moiseseduardo.hp para el Hincha Blanquiazul.
 
-### `yarn start`
+## Release v1.01
+Viernes 16 de abril 2021
+- Refactor download image. Change library [html2canvas](https://html2canvas.hertzen.com)
+- Reactor CSS TShirt. Change background image for image tag <img>
+- Number List 1 - 99
+- Add watemark: blanquiazul.com
+- Add Secondary TShirt
+- Add Home Screen Button (PWA)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Release v1.02
+Viernes 16 de abril 2021
+- TShirt by theme: UI Sidebar Menu for new options
+- T-Shirt
+    - Branding Logotypes top and bottom text
+    - Minimalist / 2d design
+    - Artists (Sosa) 
+- Effects Type for Background color
+    - Radial
+    - Linear Horizontal
+    - Linear Vertical 
+- Custom Background Color: Research change color by JS
+- LocalStorage for save user info
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Features
+React 16.14
+Typescript
+Material UI
+Material Icon
+html2canvas

@@ -1,0 +1,30 @@
+export const lighten = (hex: string, value: number) => lightenDarkenColor(hex, value)
+export const darken = (hex: string, value: number) => lightenDarkenColor(hex, -value)
+
+export const lightenDarkenColor = (hex: string, value: number) => {
+  let usePound = false
+
+  if (hex[0] === '#') {
+    hex = hex.slice(1)
+    usePound = true
+  }
+
+  const num = parseInt(hex, 16)
+
+  let r = (num >> 16) + value
+
+  if (r > 255) r = 255
+  else if  (r < 0) r = 0
+
+  let b = ((num >> 8) & 0x00FF) + value
+
+  if (b > 255) b = 255
+  else if  (b < 0) b = 0
+
+  let g = (num & 0x0000FF) + value
+
+  if (g > 255) g = 255
+  else if (g < 0) g = 0
+
+  return (usePound ? '#' : '') + (g | (b << 8) | (r << 16)).toString(16)
+}

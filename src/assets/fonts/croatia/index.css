@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "NikeCroatia2020";
+  src: url("./croatia-2020.eot?6skgqk");
+  src: url("./croatia-2020.eot?6skgqk#iefix") format("embedded-opentype"),
+    url("./croatia-2020.ttf?6skgqk") format("truetype"),
+    url("./croatia-2020.woff?6skgqk") format("woff"),
+    url("./croatia-2020.svg?6skgqk#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  font-display: swap;
+}
