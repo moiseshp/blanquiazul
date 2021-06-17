@@ -1,5 +1,5 @@
 # BLANQUIAZUL
-![Screenshot Web Blanquiazul](https://moiseshp.github.io/blanquiazul/ScreeShot-Blanquiazul.png)
+![Screenshot Web Blanquiazul](https://moiseshp.github.io/blanquiazul/images/ScreeShot-Blanquiazul.png)
 
 ## Descripción
 Personaliza la camiseta del equipo peruano **Alianza Lima**. Selecciona la versión principal o la alterna, elige tu número favorito y listo! ya puedes descargarlo y compartirlo en todas tus plataformas.
